@@ -45,14 +45,14 @@ export default function Home() {
               </Link>
             </nav>
             <div className="hidden md:flex items-center space-x-4">
-              <Link 
-                href="/login" 
+              <Link
+                href="/login"
                 className="text-[#a6adc8] hover:text-[#b4befe] transition duration-200"
               >
                 Log in
               </Link>
-              <Link 
-                href="/signup" 
+              <Link
+                href="/signup"
                 className="bg-[#cba6f7] hover:bg-[#b4befe] text-[#1e1e2e] px-4 py-2 rounded-md transition duration-200"
               >
                 Sign up
@@ -159,8 +159,8 @@ export default function Home() {
 
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-[#313244] p-6 rounded-lg shadow-sm border border-[#45475a]"
               >
                 <div className="w-12 h-12 bg-[#cba6f7]/10 rounded-lg flex items-center justify-center text-[#cba6f7] mb-4">
