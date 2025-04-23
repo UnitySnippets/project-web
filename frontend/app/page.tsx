@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#1e1e2e] text-[#cdd6f4]">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -45,14 +45,14 @@ export default function Home() {
               Browse, share, and download code snippets to accelerate your Unity game development workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/snippets" 
+              <Link
+                href="/snippets"
                 className="px-6 py-3 bg-[#cba6f7] text-[#1e1e2e] font-medium rounded-lg hover:bg-[#f5c2e7] transition-colors duration-300"
               >
                 Browse Snippets
               </Link>
-              <Link 
-                href="/api/auth/signin" 
+              <Link
+                href="/api/auth/signin"
                 className="px-6 py-3 bg-[#313244] text-[#cdd6f4] font-medium rounded-lg border border-[#45475a] hover:bg-[#45475a] transition-colors duration-300"
               >
                 Sign In to Contribute
@@ -60,13 +60,13 @@ export default function Home() {
             </div>
           </div>
           <div className="hidden md:block">
-            <CodeBlock code={cameraFollowCode} language="csharp" />
+            <CodeBlock code={cameraFollowCode} language="csharp" showCopyButton={false} />
           </div>
         </div>
-        
+
         {/* Mobile version of code block */}
         <div className="md:hidden mt-8">
-          <CodeBlock code={cameraFollowCode} language="csharp" />
+          <CodeBlock code={cameraFollowCode} language="csharp" showCopyButton={false} />
         </div>
       </section>
 
@@ -87,7 +87,7 @@ export default function Home() {
               Find and implement solutions quickly with thoroughly tested code snippets that solve common game development challenges.
             </p>
           </div>
-          
+
           <div className="bg-[#313244] p-6 rounded-lg border border-[#45475a]">
             <div className="w-12 h-12 bg-[#cba6f7]/20 flex items-center justify-center rounded-lg mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#cba6f7]">
@@ -99,7 +99,7 @@ export default function Home() {
               Join a growing community of Unity developers sharing their knowledge and best practices through quality code snippets.
             </p>
           </div>
-          
+
           <div className="bg-[#313244] p-6 rounded-lg border border-[#45475a]">
             <div className="w-12 h-12 bg-[#89b4fa]/20 flex items-center justify-center rounded-lg mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#89b4fa]">
@@ -134,7 +134,7 @@ export default function Home() {
             { name: 'Utility', icon: '🔧' },
             { name: 'Networking', icon: '🌐' },
           ].map((category) => (
-            <Link 
+            <Link
               key={category.name}
               href={`/snippets?category=${category.name}`}
               className="flex flex-col items-center justify-center p-4 bg-[#1e1e2e] rounded-lg border border-[#45475a] hover:border-[#89b4fa] transition-colors"
@@ -155,8 +155,8 @@ export default function Home() {
           <p className="text-lg max-w-2xl mx-auto mb-8 text-[#a6adc8]">
             Share your own Unity code snippets with the community and help other developers level up their games.
           </p>
-          <Link 
-            href="/api/auth/signin" 
+          <Link
+            href="/api/auth/signin"
             className="px-8 py-3 bg-[#89b4fa] text-[#1e1e2e] font-medium rounded-lg hover:bg-[#b4befe] transition-colors duration-300 inline-block"
           >
             Sign In to Get Started
