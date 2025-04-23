@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] bg-[#1e1e2e] text-[#cdd6f4]">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         {/* Background */}
@@ -13,7 +13,7 @@ export default function Home() {
             alt="Background pattern"
             fill
             priority
-            className="object-cover"
+            className="object-cover opacity-30"
           />
         </div>
 
@@ -27,37 +27,38 @@ export default function Home() {
                 width={150}
                 height={32}
                 priority
+                className="invert"
               />
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="#features" className="text-gray-700 hover:text-indigo-500 transition duration-200">
+              <Link href="#features" className="text-[#a6adc8] hover:text-[#b4befe] transition duration-200">
                 Features
               </Link>
-              <Link href="#examples" className="text-gray-700 hover:text-indigo-500 transition duration-200">
+              <Link href="#examples" className="text-[#a6adc8] hover:text-[#b4befe] transition duration-200">
                 Examples
               </Link>
-              <Link href="#docs" className="text-gray-700 hover:text-indigo-500 transition duration-200">
+              <Link href="#docs" className="text-[#a6adc8] hover:text-[#b4befe] transition duration-200">
                 Documentation
               </Link>
-              <Link href="#pricing" className="text-gray-700 hover:text-indigo-500 transition duration-200">
+              <Link href="#pricing" className="text-[#a6adc8] hover:text-[#b4befe] transition duration-200">
                 Pricing
               </Link>
             </nav>
             <div className="hidden md:flex items-center space-x-4">
               <Link 
                 href="/login" 
-                className="text-gray-700 hover:text-indigo-500 transition duration-200"
+                className="text-[#a6adc8] hover:text-[#b4befe] transition duration-200"
               >
                 Log in
               </Link>
               <Link 
                 href="/signup" 
-                className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md transition duration-200"
+                className="bg-[#cba6f7] hover:bg-[#b4befe] text-[#1e1e2e] px-4 py-2 rounded-md transition duration-200"
               >
                 Sign up
               </Link>
             </div>
-            <button className="md:hidden text-gray-700 hover:text-indigo-500">
+            <button className="md:hidden text-[#a6adc8] hover:text-[#b4befe]">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
@@ -69,24 +70,24 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#cdd6f4]">
                 Unity Game Development
-                <span className="text-indigo-500"> Simplified</span>
+                <span className="text-[#cba6f7]"> Simplified</span>
               </h1>
-              <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
+              <p className="mt-6 text-lg text-[#a6adc8] max-w-2xl">
                 Access a growing library of ready-to-use Unity snippets, save development time,
                 and build better games faster. Perfect for indie developers and studios alike.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/snippets"
-                  className="bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-3 rounded-md text-center transition duration-200 flex-1 sm:flex-none"
+                  className="bg-[#cba6f7] hover:bg-[#b4befe] text-[#1e1e2e] px-8 py-3 rounded-md text-center transition duration-200 flex-1 sm:flex-none"
                 >
                   Browse Snippets
                 </Link>
                 <Link
                   href="/docs"
-                  className="border border-gray-300 hover:border-indigo-500 hover:text-indigo-500 px-8 py-3 rounded-md text-center transition duration-200 flex-1 sm:flex-none"
+                  className="border border-[#45475a] hover:border-[#b4befe] hover:text-[#b4befe] px-8 py-3 rounded-md text-center transition duration-200 flex-1 sm:flex-none"
                 >
                   View Documentation
                 </Link>
@@ -96,41 +97,41 @@ export default function Home() {
                   {[1, 2, 3, 4, 5].map((i) => (
                     <div
                       key={i}
-                      className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-gray-200"
+                      className="inline-block h-8 w-8 rounded-full ring-2 ring-[#313244] bg-[#45475a]"
                     />
                   ))}
                 </div>
-                <p className="ml-4 text-sm text-gray-700 dark:text-gray-300">
-                  <span className="font-semibold">500+</span> developers using our snippets
+                <p className="ml-4 text-sm text-[#a6adc8]">
+                  <span className="font-semibold text-[#cdd6f4]">500+</span> developers using our snippets
                 </p>
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="relative w-full max-w-lg h-64 md:h-96 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 backdrop-blur-md rounded-lg p-1">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-lg" />
-                <div className="absolute inset-0.5 bg-white dark:bg-gray-900 rounded-lg" />
+              <div className="relative w-full max-w-lg h-64 md:h-96 bg-gradient-to-br from-[#cba6f7]/20 to-[#89b4fa]/20 backdrop-blur-md rounded-lg p-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#cba6f7]/10 to-[#89b4fa]/10 rounded-lg" />
+                <div className="absolute inset-0.5 bg-[#1e1e2e] rounded-lg" />
                 <div className="absolute inset-0 flex items-center justify-center p-6">
                   <div className="w-full space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="bg-indigo-500/10 rounded px-2 py-1 text-xs font-mono text-indigo-700 dark:text-indigo-300">
+                      <div className="bg-[#cba6f7]/10 rounded px-2 py-1 text-xs font-mono text-[#cba6f7]">
                         PlayerMovement.cs
                       </div>
                       <div className="flex space-x-1">
-                        <div className="h-3 w-3 rounded-full bg-red-400" />
-                        <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                        <div className="h-3 w-3 rounded-full bg-green-400" />
+                        <div className="h-3 w-3 rounded-full bg-[#f38ba8]" />
+                        <div className="h-3 w-3 rounded-full bg-[#f9e2af]" />
+                        <div className="h-3 w-3 rounded-full bg-[#a6e3a1]" />
                       </div>
                     </div>
-                    <div className="text-xs md:text-sm font-mono text-gray-800 dark:text-gray-200 overflow-hidden">
-                      <p><span className="text-purple-600 dark:text-purple-400">using</span> UnityEngine;</p>
+                    <div className="text-xs md:text-sm font-mono text-[#cdd6f4] overflow-hidden">
+                      <p><span className="text-[#f5c2e7]">using</span> UnityEngine;</p>
                       <p>&nbsp;</p>
-                      <p><span className="text-blue-600 dark:text-blue-400">public class</span> <span className="text-green-600 dark:text-green-400">PlayerMovement</span> : MonoBehaviour</p>
+                      <p><span className="text-[#89b4fa]">public class</span> <span className="text-[#a6e3a1]">PlayerMovement</span> : MonoBehaviour</p>
                       <p>&#123;</p>
-                      <p>&nbsp;&nbsp;<span className="text-blue-600 dark:text-blue-400">public float</span> moveSpeed = 5f;</p>
-                      <p>&nbsp;&nbsp;<span className="text-blue-600 dark:text-blue-400">public float</span> jumpForce = 5f;</p>
-                      <p>&nbsp;&nbsp;<span className="text-blue-600 dark:text-blue-400">private</span> Rigidbody2D rb;</p>
+                      <p>&nbsp;&nbsp;<span className="text-[#89b4fa]">public float</span> moveSpeed = 5f;</p>
+                      <p>&nbsp;&nbsp;<span className="text-[#89b4fa]">public float</span> jumpForce = 5f;</p>
+                      <p>&nbsp;&nbsp;<span className="text-[#89b4fa]">private</span> Rigidbody2D rb;</p>
                       <p>&nbsp;</p>
-                      <p>&nbsp;&nbsp;<span className="text-blue-600 dark:text-blue-400">void</span> Start() &#123;</p>
+                      <p>&nbsp;&nbsp;<span className="text-[#89b4fa]">void</span> Start() &#123;</p>
                       <p>&nbsp;&nbsp;&nbsp;&nbsp;rb = GetComponent&lt;Rigidbody2D&gt;();</p>
                       <p>&nbsp;&nbsp;&#125;</p>
                       <p>&#125;</p>
@@ -144,13 +145,13 @@ export default function Home() {
       </div>
 
       {/* Feature Section */}
-      <section id="features" className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section id="features" className="py-20 bg-[#181825]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-3xl font-bold text-[#cdd6f4]">
               Everything You Need for Unity Development
             </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[#a6adc8] max-w-2xl mx-auto">
               Our snippets library covers all aspects of Unity game development,
               from basic mechanics to advanced systems.
             </p>
@@ -160,13 +161,13 @@ export default function Home() {
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700"
+                className="bg-[#313244] p-6 rounded-lg shadow-sm border border-[#45475a]"
               >
-                <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center text-indigo-500 mb-4">
+                <div className="w-12 h-12 bg-[#cba6f7]/10 rounded-lg flex items-center justify-center text-[#cba6f7] mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="mt-2 text-gray-600 dark:text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-[#cdd6f4]">{feature.title}</h3>
+                <p className="mt-2 text-[#a6adc8]">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -174,57 +175,57 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-[#11111b] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Product</h3>
+              <h3 className="text-lg font-semibold mb-4 text-[#cdd6f4]">Product</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Features</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Pricing</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Changelog</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Roadmap</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Features</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Pricing</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Changelog</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Roadmap</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Resources</h3>
+              <h3 className="text-lg font-semibold mb-4 text-[#cdd6f4]">Resources</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Documentation</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Tutorials</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Examples</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Blog</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Documentation</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Tutorials</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Examples</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Blog</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
+              <h3 className="text-lg font-semibold mb-4 text-[#cdd6f4]">Company</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">About</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Team</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Careers</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Contact</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">About</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Team</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Careers</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Contact</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4">Legal</h3>
+              <h3 className="text-lg font-semibold mb-4 text-[#cdd6f4]">Legal</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Privacy</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Terms</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">License</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-white transition">Cookies</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Privacy</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Terms</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">License</Link></li>
+                <li><Link href="#" className="text-[#a6adc8] hover:text-[#b4befe] transition">Cookies</Link></li>
               </ul>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+          <div className="mt-12 pt-8 border-t border-[#313244] flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center">
               <Image
                 src="/logo.svg"
                 alt="UnitySnippets Logo"
                 width={130}
                 height={28}
-                className="dark:invert"
+                className="invert"
               />
             </div>
-            <div className="mt-4 md:mt-0 text-gray-400 text-sm">
+            <div className="mt-4 md:mt-0 text-[#a6adc8] text-sm">
               © {new Date().getFullYear()} UnitySnippets. All rights reserved.
             </div>
           </div>
