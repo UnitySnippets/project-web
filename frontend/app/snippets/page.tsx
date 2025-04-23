@@ -132,7 +132,7 @@ export default function SnippetsPage() {
                             <div className="bg-[#313244] rounded-lg p-8 text-center border border-[#45475a]">
                                 <h3 className="text-xl font-semibold mb-2">No snippets found</h3>
                                 <p className="text-[#a6adc8]">
-                                    Try adjusting your search or category filters to find what you're looking
+                                    Try adjusting your search or category filters to find what you&apos;re looking
                                     for.
                                 </p>
                             </div>
