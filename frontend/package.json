@@ -9,10 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/highlight": "^0.19.8",
+    "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/lang-javascript": "^6.2.3",
+    "@codemirror/language": "^6.11.0",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.36.5",
+    "@lezer/highlight": "^1.2.1",
     "next": "15.3.1",
     "next-mcp-server": "^0.2.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "sonner": "^1.4.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
