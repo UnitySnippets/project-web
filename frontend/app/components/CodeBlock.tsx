@@ -37,4 +37,4 @@ export default function CodeBlock({ code, language }: CodeBlockProps) {
             </button>
         </div>
     );
-} 
+}

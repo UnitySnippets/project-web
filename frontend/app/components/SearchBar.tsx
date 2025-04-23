@@ -32,4 +32,4 @@ export default function SearchBar({ searchQuery, onSearchChange }: SearchBarProp
             />
         </div>
     );
-} 
+}
