@@ -1,3 +1,5 @@
+"use client";
+
 interface CategoryFilterProps {
     categories: string[];
     selectedCategory: string;
@@ -16,8 +18,8 @@ export default function CategoryFilter({
                 <button
                     onClick={() => onCategoryChange("all")}
                     className={`px-3 py-1.5 rounded-full text-sm transition-colors ${selectedCategory === "all"
-                            ? "bg-[#cba6f7] text-[#1e1e2e]"
-                            : "bg-[#313244] text-[#a6adc8] hover:bg-[#45475a]"
+                        ? "bg-[#cba6f7] text-[#1e1e2e]"
+                        : "bg-[#313244] text-[#a6adc8] hover:bg-[#45475a]"
                         }`}
                 >
                     All
@@ -27,8 +29,8 @@ export default function CategoryFilter({
                         key={category}
                         onClick={() => onCategoryChange(category)}
                         className={`px-3 py-1.5 rounded-full text-sm transition-colors ${selectedCategory === category
-                                ? "bg-[#cba6f7] text-[#1e1e2e]"
-                                : "bg-[#313244] text-[#a6adc8] hover:bg-[#45475a]"
+                            ? "bg-[#cba6f7] text-[#1e1e2e]"
+                            : "bg-[#313244] text-[#a6adc8] hover:bg-[#45475a]"
                             }`}
                     >
                         {category}
