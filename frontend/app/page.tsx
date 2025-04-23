@@ -1,6 +1,33 @@
 import Link from 'next/link';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CodeBlock from './components/CodeBlock';
+
+// Example Unity C# camera follow script for the hero section
+const cameraFollowCode = `using UnityEngine;
+
+public class CameraFollow : MonoBehaviour
+{
+    public Transform target;
+    public Vector3 offset = new Vector3(0, 5, -10);
+    public float smoothSpeed = 0.125f;
+    
+    void LateUpdate()
+    {
+        if (target == null)
+            return;
+            
+        Vector3 desiredPosition = target.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(
+            transform.position, 
+            desiredPosition, 
+            smoothSpeed
+        );
+        
+        transform.position = smoothedPosition;
+        transform.LookAt(target);
+    }
+}`;
 
 export default function Home() {
   return (
@@ -9,27 +36,37 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-[#f5c2e7] via-[#cba6f7] to-[#89b4fa] text-transparent bg-clip-text">
-            Unity Snippets Library
-          </h1>
-          <p className="text-xl max-w-3xl mx-auto mb-8 text-[#a6adc8]">
-            Browse, share, and download code snippets to accelerate your Unity game development workflow.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              href="/snippets" 
-              className="px-6 py-3 bg-[#cba6f7] text-[#1e1e2e] font-medium rounded-lg hover:bg-[#f5c2e7] transition-colors duration-300"
-            >
-              Browse Snippets
-            </Link>
-            <Link 
-              href="/api/auth/signin" 
-              className="px-6 py-3 bg-[#313244] text-[#cdd6f4] font-medium rounded-lg border border-[#45475a] hover:bg-[#45475a] transition-colors duration-300"
-            >
-              Sign In to Contribute
-            </Link>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-[#f5c2e7] via-[#cba6f7] to-[#89b4fa] text-transparent bg-clip-text">
+              Unity Snippets Library
+            </h1>
+            <p className="text-xl mb-8 text-[#a6adc8]">
+              Browse, share, and download code snippets to accelerate your Unity game development workflow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/snippets" 
+                className="px-6 py-3 bg-[#cba6f7] text-[#1e1e2e] font-medium rounded-lg hover:bg-[#f5c2e7] transition-colors duration-300"
+              >
+                Browse Snippets
+              </Link>
+              <Link 
+                href="/api/auth/signin" 
+                className="px-6 py-3 bg-[#313244] text-[#cdd6f4] font-medium rounded-lg border border-[#45475a] hover:bg-[#45475a] transition-colors duration-300"
+              >
+                Sign In to Contribute
+              </Link>
+            </div>
           </div>
+          <div className="hidden md:block">
+            <CodeBlock code={cameraFollowCode} language="csharp" />
+          </div>
+        </div>
+        
+        {/* Mobile version of code block */}
+        <div className="md:hidden mt-8">
+          <CodeBlock code={cameraFollowCode} language="csharp" />
         </div>
       </section>
 
