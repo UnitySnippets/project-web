@@ -41,16 +41,18 @@ public class CameraFollow : MonoBehaviour
     };
 }
 
-export default async function SnippetPage({ params }: { params: { id: string } }) {
-    const snippet = await getSnippetById(params.id);
+export default async function SnippetPage({ params }: { params: Promise<{ id: string }> }) {
+    // Await params before using its properties
+    const resolvedParams = await params;
+    const snippet = await getSnippetById(resolvedParams.id);
 
     return (
         <div className="min-h-screen bg-[#1e1e2e] text-[#cdd6f4]">
             <Header />
             <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="mb-6">
-                    <Link 
-                        href="/snippets" 
+                    <Link
+                        href="/snippets"
                         className="flex items-center text-[#89b4fa] hover:text-[#b4befe] transition-colors"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-2">
