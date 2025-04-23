@@ -1,0 +1,1 @@
+{\n  \"mcpServers\": {\n    \"next.js\": {\n      \"url\": \"http://localhost:4857/sse\"\n    }\n  }\n}
